@@ -1,56 +1,136 @@
-/* 1. Button with smooth background-color transition */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
+/* CSS Variables */
+:root {
+  --primary-color: #004080;
+  --secondary-color: #4CAF50;
+  --text-color: #333;
+  --background-light: #f9f9f9;
+  --white: #fff;
+}
+
+/* Reset & basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-color);
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Navigation */
+.navigation ul {
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  list-style: none;
+}
+
+.navigation li {
+  margin: 0 1rem;
+}
+
+.navigation a {
+  display: block;
+  padding: 1rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+  background-color: #45a049;
+}
+
+/* Main Sections */
+main {
+  padding: 2rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+}
+
+/* Service Cards with Flexbox */
+.services {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-card {
+  flex: 1 1 200px;
+  background: var(--secondary-color);
+  color: var(--white);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Contact Button */
+.contact-button {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #45a049;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .services {
+      flex-direction: column;
+      align-items: center;
   }
-  
-  button:hover {
-    background-color: #45a049;
+
+  .navigation ul {
+      flex-direction: column;
   }
-  
-  /* 2. Animation: Move div from left to right */
-  @keyframes moveRight {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(300px); }
+
+  .navigation li {
+      margin: 0.5rem 0;
   }
-  
-  .moving-div {
-    width: 100px;
-    height: 100px;
-    background-color: lightcoral;
-    animation: moveRight 3s infinite alternate;
-  }
-  
-  /* 3. Style odd and even list items */
-  li:nth-child(odd) {
-    background-color: #f2f2f2;
-  }
-  
-  li:nth-child(even) {
-    background-color: #ddd;
-  }
-  
-  /* 4. Grayscale filter on image */
-  img {
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
-  }
-  
-  img:hover {
-    filter: grayscale(0%);
-  }
-  
-  /* 5. Decorative quote mark for blockquote */
-  blockquote::before {
-    content: "“";
-    font-size: 4rem;
-    color: #ccc;
-    position: absolute;
-    left: -20px;
-    top: -10px;
-  }
-  
+}

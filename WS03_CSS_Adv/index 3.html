@@ -4,34 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Abdullahi">
-    <meta name="description" content="Websivuston kehittäminen -kurssin harjoitustyö">
-    <title>Abdullahi - Websivuston kehittäminen</title>
+    <meta name="description" content="WS03 - Kehittynyt CSS-harjoitus">
+    <title>WS03 - Kehittynyt CSS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Websivuston kehittäminen</h1>
-        <p>Opiskelija: Abdullahi</p>
-        <p>Opettaja: Jari Kovalainen</p>
+        <h1>WS03 - Kehittynyt CSS</h1>
     </header>
 
+    <nav class="navigation">
+        <ul>
+            <li><a href="#home">Koti</a></li>
+            <li><a href="#about">Tietoa</a></li>
+            <li><a href="#services">Palvelut</a></li>
+            <li><a href="#contact">Yhteys</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section class="intro">
+        <section id="home" class="section">
             <h2>Tervetuloa!</h2>
-            <p>Tämä on harjoitustyö Websivuston kehittäminen -kurssille Laureassa.</p>
+            <p>Opettelemme kehittyneitä CSS-tekniikoita.</p>
         </section>
 
-        <section class="image-section">
-            <h2>Minä</h2>
-            <img src="IMG20250405141837.jpg" alt="Abdullahi" class="profile-pic">
+        <section id="about" class="section">
+            <h2>Tietoa minusta</h2>
+            <p>Olen Abdullahi, opiskelija Laureassa.</p>
         </section>
 
-        <section class="links">
-            <h2>Linkit</h2>
-            <ul>
-                <li><a href="mailto:abdullahimohamoud81@gmail.com">Sähköposti</a></li>
-                <li><a href="https://github.com/abdullahilcode/verbose-waddle" target="_blank">GitHub-repositorio</a></li>
-            </ul>
+        <section id="services" class="section services">
+            <h2>Palvelut</h2>
+            <div class="service-card">Web-suunnittelu</div>
+            <div class="service-card">Frontend-kehitys</div>
+            <div class="service-card">Responsiivinen muotoilu</div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Ota yhteyttä</h2>
+            <button class="contact-button">Lähetä viesti</button>
         </section>
     </main>
 
