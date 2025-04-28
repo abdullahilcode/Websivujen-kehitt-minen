@@ -1,13 +1,12 @@
-/* CSS Variables */
+/* 1. Use CSS Variables */
 :root {
   --primary-color: #004080;
   --secondary-color: #4CAF50;
   --text-color: #333;
-  --background-light: #f9f9f9;
   --white: #fff;
 }
 
-/* Reset & basics */
+/* 2. Basic Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -15,36 +14,36 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: var(--background-light);
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   color: var(--text-color);
 }
 
-/* Header */
+/* 3. Header */
 header {
   background-color: var(--primary-color);
   color: var(--white);
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 20px;
 }
 
-/* Navigation */
+/* 4. Navigation */
 .navigation ul {
   display: flex;
   justify-content: center;
-  background-color: var(--secondary-color);
   list-style: none;
+  background-color: var(--secondary-color);
+  padding: 10px 0;
 }
 
 .navigation li {
-  margin: 0 1rem;
+  margin: 0 15px;
 }
 
 .navigation a {
-  display: block;
-  padding: 1rem;
-  color: var(--white);
   text-decoration: none;
+  color: var(--white);
+  padding: 10px;
   transition: background-color 0.3s ease;
 }
 
@@ -52,48 +51,40 @@ header {
   background-color: #45a049;
 }
 
-/* Main Sections */
+/* 5. Main Section */
 main {
-  padding: 2rem;
+  padding: 20px;
 }
 
+/* 6. Section Styles */
 .section {
-  margin-bottom: 2rem;
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  animation: fadeIn 1s ease;
+  margin-bottom: 20px;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Service Cards with Flexbox */
-.services {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
+/* 7. Service Cards (Flexbox) */
 .service-card {
-  flex: 1 1 200px;
-  background: var(--secondary-color);
+  background-color: var(--secondary-color);
   color: var(--white);
-  padding: 1.5rem;
+  padding: 15px;
+  margin: 10px 0;
   text-align: center;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
-/* Contact Button */
+/* 8. Contact Button */
 .contact-button {
   background-color: var(--secondary-color);
   color: var(--white);
   padding: 10px 20px;
-  font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -104,33 +95,42 @@ main {
   background-color: #45a049;
 }
 
-/* Footer */
+/* 9. Footer */
 footer {
+  text-align: center;
+  padding: 15px;
   background-color: var(--primary-color);
   color: var(--white);
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
 }
 
-/* Animation */
+/* 10. Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .services {
-      flex-direction: column;
-      align-items: center;
-  }
+.section {
+  animation: fadeIn 1s ease-in-out;
+}
 
+/* 11. Responsive Design */
+@media (max-width: 768px) {
   .navigation ul {
       flex-direction: column;
   }
 
   .navigation li {
-      margin: 0.5rem 0;
+      margin: 10px 0;
+  }
+
+  .service-card {
+      flex: 1 1 100%;
+      margin: 10px 0;
   }
 }

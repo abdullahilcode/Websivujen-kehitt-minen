@@ -1,0 +1,167 @@
+/* 1. Use CSS Variables */
+:root {
+  --primary-color: #004080;
+  --secondary-color: #4CAF50;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --white: #fff;
+}
+
+/* 2. Basic Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* 3. Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 20px 0;
+  text-align: center;
+}
+
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 4. Navigation */
+.navigation {
+  background-color: var(--secondary-color);
+  padding: 10px 0;
+}
+
+.navigation .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navigation li {
+  margin: 0 15px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+  background-color: #45a049;
+}
+
+/* 5. Layout - Main Content & Sidebar */
+.layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 3;
+}
+
+.main-content section {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Service Cards */
+.service-card {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 15px;
+  margin: 10px 0;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact Button */
+.contact-button {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #45a049;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  flex: 1;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 6. Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 7. Responsive Design */
+@media (max-width: 768px) {
+  /* Navigation changes */
+  .navigation ul {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .navigation li {
+      margin: 10px 0;
+  }
+
+  /* Layout changes for mobile */
+  .layout {
+      flex-direction: column;
+  }
+
+  .main-content {
+      flex: 1;
+  }
+
+  .sidebar {
+      margin-top: 20px;
+  }
+}
