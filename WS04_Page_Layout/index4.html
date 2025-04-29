@@ -4,65 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Abdullahi">
-    <meta name="description" content="WS03 - Kehittynyt CSS-harjoitus">
-    <title>WS03 - Kehittynyt CSS</title>
+    <meta name="description" content="Websivuston kehittäminen -kurssin harjoitustyö">
+    <title>Abdullahi - Websivuston kehittäminen</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Websivuston Kehittäminen</h1>
-            <p>Opiskelija: Abdullahi</p>
-        </div>
+        <h1>Websivuston kehittäminen</h1>
+        <p>Opiskelija: Abdullahi</p>
+        <p>Opettaja: Jari Kovalainen</p>
     </header>
 
-    <nav class="navigation">
-        <div class="container">
+    <main>
+        <section id="welcome-section" class="intro">
+            <h2>Tervetuloa!</h2>
+            <p>Tämä on harjoitustyö Websivuston kehittäminen -kurssille Laureassa.</p>
+        </section>
+
+        <section class="image-section">
+            <h2>Minä</h2>
+            <img src="IMG20250405141837.jpg" alt="Abdullahi" class="profile-pic filter-image">
+        </section>
+
+        <section class="links">
+            <h2>Linkit</h2>
             <ul>
-                <li><a href="#home">Koti</a></li>
-                <li><a href="#about">Tietoa</a></li>
-                <li><a href="#services">Palvelut</a></li>
-                <li><a href="#contact">Yhteys</a></li>
+                <li><a href="mailto:abdullahimohamoud81@gmail.com">Sähköposti</a></li>
+                <li><a href="https://github.com/abdullahilcode/verbose-waddle" target="_blank">GitHub-repositorio</a></li>
             </ul>
-        </div>
-    </nav>
+            <button class="transition-button">Ota yhteyttä</button>
+        </section>
 
-    <div class="layout">
-        <main class="main-content">
-            <section id="home">
-                <h2>Tervetuloa!</h2>
-                <p>Tässä on esimerkki, kuinka CSS:n edistyneet ominaisuudet voivat luoda responsiivisen ja modernin layoutin.</p>
-            </section>
+        <section class="quote">
+            <blockquote>
+                Oppiminen ei ole koskaan hukkaan heitettyä aikaa.
+            </blockquote>
+        </section>
 
-            <section id="about">
-                <h2>Tietoa</h2>
-                <p>Minä olen Abdullahi ja tässä on esimerkki, kuinka CSS:n edistyneet ominaisuudet voidaan yhdistää.</p>
-            </section>
+        <div class="animation-box"></div>
 
-            <section id="services">
-                <h2>Palvelut</h2>
-                <div class="service-card">Web-suunnittelu</div>
-                <div class="service-card">Frontend-kehitys</div>
-                <div class="service-card">Responsiivinen muotoilu</div>
-            </section>
+        <section class="flex-section">
+            <h2>Flexbox Layout</h2>
+            <div class="flex-container">
+                <div class="box">Box 1</div>
+                <div class="box">Box 2</div>
+                <div class="box">Box 3</div>
+            </div>
+        </section>
 
-            <section id="contact">
-                <h2>Ota yhteyttä</h2>
-                <button class="contact-button">Lähetä viesti</button>
-            </section>
-        </main>
+        <section class="grid-section">
+            <h2>Grid Layout</h2>
+            <div class="grid-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+        </section>
 
-        <aside class="sidebar">
-            <h3>Lisätietoja</h3>
-            <p>Voit ottaa yhteyttä minuun sähköpostilla tai tarkistaa lisää projekteja GitHubista.</p>
-        </aside>
-    </div>
+        <section>
+            <h2>Responsive Box</h2>
+            <div class="responsive-box">Resize the window to see the effect</div>
+        </section>
+
+        <section>
+            <h2>Lista esimerkillä pseudo-luokilla</h2>
+            <ul class="pseudo-list">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Abdullahi - Laurea</p>
-        </div>
+        <p>&copy; 2025 Abdullahi - Laurea</p>
     </footer>
 </body>
 </html>
+
+
+
 

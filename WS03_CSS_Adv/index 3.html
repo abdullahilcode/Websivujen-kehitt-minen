@@ -4,45 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Abdullahi">
-    <meta name="description" content="WS03 - Kehittynyt CSS-harjoitus">
-    <title>WS03 - Kehittynyt CSS</title>
+    <meta name="description" content="Websivuston kehittäminen -kurssin harjoitustyö">
+    <title>Abdullahi - Websivuston kehittäminen</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>WS03 - Kehittynyt CSS</h1>
+        <h1>Websivuston kehittäminen</h1>
+        <p>Opiskelija: Abdullahi</p>
+        <p>Opettaja: Jari Kovalainen</p>
     </header>
 
-    <nav class="navigation">
-        <ul>
-            <li><a href="#home">Koti</a></li>
-            <li><a href="#about">Tietoa</a></li>
-            <li><a href="#services">Palvelut</a></li>
-            <li><a href="#contact">Yhteys</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section id="home" class="section">
+        <section class="intro">
             <h2>Tervetuloa!</h2>
-            <p>Tässä on perus layout, joka käyttää CSS:n edistyneitä ominaisuuksia kuten animaatioita, hover-efektejä ja media queryjä.</p>
+            <p>Tämä on harjoitustyö Websivuston kehittäminen -kurssille Laureassa.</p>
         </section>
 
-        <section id="about" class="section">
-            <h2>Tietoa</h2>
-            <p>Minä olen Abdullahi ja tässä on esimerkki, kuinka CSS:n edistyneet ominaisuudet voidaan yhdistää.</p>
+        <section class="image-section">
+            <h2>Minä</h2>
+            <img src="IMG20250405141837.jpg" alt="Abdullahi" class="filter-image">
         </section>
 
-        <section id="services" class="section">
-            <h2>Palvelut</h2>
-            <div class="service-card">Web-suunnittelu</div>
-            <div class="service-card">Frontend-kehitys</div>
-            <div class="service-card">Responsiivinen muotoilu</div>
+        <section class="links">
+            <h2>Linkit</h2>
+            <ul>
+                <li><a href="mailto:abdullahimohamoud81@gmail.com">Sähköposti</a></li>
+                <li><a href="https://github.com/abdullahilcode/verbose-waddle" target="_blank">GitHub-repositorio</a></li>
+            </ul>
+            <button class="transition-button">Ota yhteyttä</button>
         </section>
 
-        <section id="contact" class="section">
-            <h2>Ota yhteyttä</h2>
-            <button class="contact-button">Lähetä viesti</button>
+        <section>
+            <h2>Animaatio</h2>
+            <div class="animation-box"></div>
+        </section>
+
+        <section>
+            <h2>Lista esimerkki</h2>
+            <ul class="pseudo-list">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Inspiroiva ajatus</h2>
+            <blockquote class="quote">
+                Oppiminen ei ole koskaan hukkaan heitettyä aikaa.
+            </blockquote>
         </section>
     </main>
 
@@ -51,3 +63,4 @@
     </footer>
 </body>
 </html>
+
