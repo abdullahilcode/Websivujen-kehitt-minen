@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Abdullahi">
+  <meta name="description" content="Websivuston kehittäminen -kurssin harjoitustyö">
+  <title>Abdullahi - Websivuston kehittäminen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Websivuston kehittäminen</h1>
+    <p>Opiskelija: Abdullahi</p>
+    <p>Opettaja: Jari Kovalainen</p>
+  </header>
+
+  <nav class="responsive-nav">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <ul class="nav-list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="welcome-section" class="intro">
+      <h2>Tervetuloa!</h2>
+      <p>Tämä on harjoitustyö Websivuston kehittäminen -kurssille Laureassa.</p>
+    </section>
+
+    <section class="image-section">
+      <h2>Minä</h2>
+      <img src="IMG20250405141837.jpg" alt="Abdullahi" class="responsive-image">
+    </section>
+
+    <section class="responsive-layout">
+      <h2>Responsiivinen Layout</h2>
+      <div class="responsive-container">
+        <div class="column">Column 1</div>
+        <div class="column">Column 2</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Media Query Box</h2>
+      <div class="media-query-box">Resize the window to see the effect</div>
+    </section>
+
+    <section class="links">
+      <h2>Linkit</h2>
+      <ul>
+        <li><a href="mailto:abdullahimohamoud81@gmail.com">Sähköposti</a></li>
+        <li><a href="https://abdullahilcode.github.io/Websivujen-kehitt-minen/" target="_blank">GitHub-repositorio</a></li>
+      </ul>
+      <button class="transition-button">Ota yhteyttä</button>
+    </section>
+
+    <section class="quote">
+      <blockquote>
+        Oppiminen ei ole koskaan hukkaan heitettyä aikaa.
+      </blockquote>
+    </section>
+
+    <section class="flex-section">
+      <h2>Flexbox Layout</h2>
+      <div class="flex-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+    </section>
+
+    <section class="grid-section">
+      <h2>Grid Layout</h2>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Lista esimerkillä pseudo-luokilla</h2>
+      <ul class="pseudo-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Abdullahi - Laurea</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navList = document.querySelector('.nav-list');
+      navList.style.display = navList.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+</body>
+</html>
