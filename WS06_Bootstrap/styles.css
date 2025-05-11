@@ -1,0 +1,153 @@
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #f0f8ff, #e6f7ff);
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    background: #004080;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Intro */
+  .intro {
+    padding: 2rem;
+    text-align: center;
+    background-color: #ffffffcc;
+  }
+  
+  /* Image section */
+  .image-section {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .responsive-image {
+    width: 200px;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 4px solid #004080;
+    transition: filter 0.3s ease;
+    filter: grayscale(100%);
+  }
+  
+  .responsive-image:hover {
+    filter: grayscale(0%);
+  }
+  
+  /* Links section */
+  .links {
+    text-align: center;
+    padding: 2rem;
+    background-color: #eaf4ff;
+  }
+  
+  .links ul {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+  }
+  
+  .links li {
+    margin: 0.5rem 0;
+  }
+  
+  .links a {
+    color: #004080;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .links a:hover {
+    color: #007acc;
+  }
+  
+  /* Task 1: CSS Transitions */
+  .transition-button {
+    background-color: lightblue;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .transition-button:hover {
+    background-color: lightcoral;
+  }
+  
+  /* Task 2: CSS Animation */
+  .animation-box {
+    width: 50px;
+    height: 50px;
+    background-color: lightgreen;
+    position: relative;
+    animation: move 2s infinite alternate;
+    margin: 2rem auto;
+  }
+  
+  @keyframes move {
+    from {
+      left: 0;
+    }
+    to {
+      left: 100px;
+    }
+  }
+  
+  /* Task 3: Pseudo-classes */
+  .pseudo-list {
+    max-width: 300px;
+    margin: 0 auto 2rem auto;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .pseudo-list li:nth-child(odd) {
+    background-color: lightgray;
+  }
+  
+  .pseudo-list li:nth-child(even) {
+    background-color: white;
+  }
+  
+  /* Task 5: Pseudo-elements */
+  .quote {
+    position: relative;
+    padding-left: 20px;
+    font-style: italic;
+    text-align: center;
+    background-color: #d9ecff;
+    margin: 2rem;
+  }
+  
+  .quote::before {
+    content: '“';
+    font-size: 40px;
+    position: absolute;
+    left: 5px;
+    top: 0;
+    color: lightgray;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #00264d;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
